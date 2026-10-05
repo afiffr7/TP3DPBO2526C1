@@ -1,9 +1,12 @@
+# membuat class Weaponery
 class Weaponery:
+    # constructor
     def __init__(self, id:str, nama:str, damage:int):
         self.id = id
         self.nama = nama
         self.damage = damage
 
+    # getter dan setter masing-masing attribut
     def getId(self) -> str:
         return self.id
 

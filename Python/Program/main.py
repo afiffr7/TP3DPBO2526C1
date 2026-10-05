@@ -2,10 +2,12 @@ from Rudal import Rudal
 from Meriam import Meriam
 from Kapal import Kapal
 
+# inisialisasi list of object
 listMeriam = []
 listRudal = []
 listKapal = []
 
+# menambahkan data secara hardcode
 listMeriam.append(Meriam("WEP-001", "5-inch/38 caliber Dual Purpose Gun", 250, 127.0))
 listMeriam.append(Meriam("WEP-002", "38 cm/52 SK C/34 Naval Gun", 850, 380.0))
 listMeriam.append(Meriam("WEP-003", "BL 6-inch Mk XXIII Gun", 450, 152.4))
@@ -23,7 +25,7 @@ listKapal[1].addWeapon(listRudal[1])
 listKapal[2].addWeapon(listRudal[2])
 
 print("<=== List kapal ===>\n")
-for kapal in listKapal:
+for kapal in listKapal: # print list kapal
     print(f"{kapal.getId()} - {kapal.getNama()}")
     print(f"Jenis: {kapal.getJenis()}")
     print("Mesin Kapal")
@@ -35,7 +37,7 @@ for kapal in listKapal:
         print(f"- IdWeapon: {weapon.getId()}")
         print(f"    Nama: {weapon.getNama()}")
         print(f"    Damage: {weapon.getDamage()}")
-        if isinstance(weapon, Meriam):
+        if isinstance(weapon, Meriam): # cek instance child Weaponery untuk print sesuai attributnya
             print(f"    Kaliber: {weapon.getKaliber()}")
         elif isinstance(weapon, Rudal):
             print(f"    Tipe Pemandu: {weapon.getTipePemandu()}")

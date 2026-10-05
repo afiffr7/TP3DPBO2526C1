@@ -1,6 +1,7 @@
 #include"Rudal.cpp"
 using namespace std;
 
+// Membuat class MesinKapal
 class MesinKapal{
     private:
     string id;
@@ -8,14 +9,16 @@ class MesinKapal{
     string tipe;
 
     public:
-    MesinKapal(){}
+    MesinKapal(){} // constructor kosong
 
+    // constructor
     MesinKapal(string id, string nama, string tipe){
         this->id = id;
         this->nama = nama;
         this->tipe = tipe;
     }
 
+    // getter dan setter tiap attribut
     string getId(){
         return id;
     }
@@ -37,5 +40,5 @@ class MesinKapal{
         this->tipe = tipe;
     }
 
-    ~MesinKapal(){}
+    ~MesinKapal(){} // destructor
 };

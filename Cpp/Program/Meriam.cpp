@@ -1,13 +1,15 @@
 #include"Weaponery.cpp"
 using namespace std;
 
+// membuat class Meriam sebagai child dari Weaponery
 class Meriam : public Weaponery{
     private:
     double kaliber;
 
     public:
-    Meriam(){}
+    Meriam(){} // constructor kosong
 
+    // constructor
     Meriam(string id, string nama, int damage, double kaliber){
         this->setId(id);
         this->setNama(nama);
@@ -15,6 +17,7 @@ class Meriam : public Weaponery{
         this->kaliber = kaliber;
     }
 
+    // getter dan setter attribut
     double getKaliber(){
         return kaliber;
     }
@@ -22,5 +25,5 @@ class Meriam : public Weaponery{
         this->kaliber = kaliber;
     }
 
-    ~Meriam(){}
+    ~Meriam(){} // destructor
 };

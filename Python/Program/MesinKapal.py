@@ -1,9 +1,12 @@
+# membuat class MesinKapal
 class MesinKapal:
+    # constructor
     def __init__(self, id: str, nama: str, tipe: str):
         self.id = id
         self.nama = nama
         self.tipe = tipe
 
+    # getter dan setter masing-masing attribut
     def getId(self) -> str:
         return self.id
 

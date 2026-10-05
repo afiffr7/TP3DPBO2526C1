@@ -1,17 +1,19 @@
 #include"MesinKapal.cpp"
 using namespace std;
 
+// Membuat class Kapal
 class Kapal{
     private:
     string id;
     string nama;
     string jenis;
-    MesinKapal mesin;
-    vector<Weaponery*> listWeapon;
+    MesinKapal mesin; // komposisi dengan mesin
+    vector<Weaponery*> listWeapon; // aggregasi dengan weapon
 
     public:
-    Kapal(){};
+    Kapal(){}; // constructor kosong
 
+    // constructor
     Kapal(string id, string nama, string jenis, string idMesin, string namaMesin, string tipeMesin, vector<Weaponery*> listWeapon){
         this->id = id;
         this->nama = nama;
@@ -20,6 +22,7 @@ class Kapal{
         this->listWeapon = listWeapon;
     }
 
+    // getter dan setter masing-masing attribut
     string getId(){
         return id;
     }
@@ -41,6 +44,7 @@ class Kapal{
         this->jenis = jenis;
     }
 
+    // khusus mesin tidak memiliki setter karena merupakan komposisi dari kapal
     MesinKapal getMesin(){
         return mesin;
     }
@@ -51,9 +55,10 @@ class Kapal{
     void setListWeapon(vector<Weaponery*> listWeapon){
         this->listWeapon = listWeapon;
     }
+    // method untuk menambahkan weapon ke list
     void addWeapon(Weaponery* weapon){
         listWeapon.push_back(weapon);
     }
 
-    ~Kapal(){}
+    ~Kapal(){} // destructor
 };

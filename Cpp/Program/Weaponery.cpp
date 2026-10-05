@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Membuat class Weaponery
 class Weaponery{
     private:
     string id;
@@ -8,14 +9,16 @@ class Weaponery{
     int damage;
 
     public:
-    Weaponery(){}
+    Weaponery(){} // constructor kosong
 
+    // constructor
     Weaponery(string id, string nama, int damage){
         this->id = id;
         this->nama = nama;
         this->damage = damage;
     }
 
+    // getter dan setter tiap attribut
     string getId(){
         return id;
     }
@@ -37,5 +40,6 @@ class Weaponery{
         this->damage = damage;
     }
 
+    // menggunakan virtual destructor agar dapat memindahkan pointer ke child nya (gatau katanya suruh gini)
     virtual ~Weaponery(){}
 };

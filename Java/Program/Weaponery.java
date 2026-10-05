@@ -1,14 +1,19 @@
+package Program;
+
+// Membuat class weaponery
 public class Weaponery {
     private String id;
     private String nama;
     private int damage;
 
+    // Constructor
     public Weaponery(String id, String nama, int damage) {
         this.id = id;
         this.nama = nama;
         this.damage = damage;
     }
 
+    // getter dan setter masing-masing attribut
     public String getId() {
         return id;
     }

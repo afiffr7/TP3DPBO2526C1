@@ -1,14 +1,16 @@
 #include"Meriam.cpp"
 using namespace std;
 
+// membuat class Rudal sebagai child dari Weaponery
 class Rudal : public Weaponery{
     private:
     string tipePemandu;
     string sasaran;
 
     public:
-    Rudal(){}
+    Rudal(){} // constructor kosong
 
+    // constructor
     Rudal(string id, string nama, int damage, string tipePemandu, string sasaran){
         this->setId(id);
         this->setNama(nama);
@@ -17,6 +19,7 @@ class Rudal : public Weaponery{
         this->sasaran = sasaran;
     }
 
+    // getter dan setter tiap attribut
     string getTipePemandu(){
         return tipePemandu;
     }

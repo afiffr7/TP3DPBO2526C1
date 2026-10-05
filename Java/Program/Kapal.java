@@ -1,12 +1,16 @@
+package Program;
+
 import java.util.List;
 
+// Membuat class Kapal
 public class Kapal {
     private String id;
     private String nama;
     private String jenis;
-    private MesinKapal mesin;
-    private List<Weaponery> listWeapon;
+    private MesinKapal mesin; // berkomposisi dengan mesin
+    private List<Weaponery> listWeapon; // beragregasi dengan weaponery
 
+    // constructor
     public Kapal(String id, String nama, String jenis, String idMesin, String namaMesin, String tipeMesin, List<Weaponery> listWeapon) {
         this.id = id;
         this.nama = nama;
@@ -15,6 +19,7 @@ public class Kapal {
         this.listWeapon = listWeapon;
     }
 
+    // getter dan setter tiap attribut
     public String getId() {
         return id;
     }
@@ -39,6 +44,7 @@ public class Kapal {
         this.jenis = jenis;
     }
 
+    // Khusus mesin tidak memiliki setter karena merupakan komposisi atau bagian dari instance
     public MesinKapal getMesin() {
         return mesin;
     }
@@ -51,6 +57,7 @@ public class Kapal {
         this.listWeapon = listWeapon;
     }
 
+    // method untuk menambahkan weapon ke listWeapon
     public void addWeapon(Weaponery weapon) {
         listWeapon.add(weapon);
     }
