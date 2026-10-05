@@ -21,7 +21,7 @@ class Weaponery memiliki relasi inheritance dengan class Rudal dan class Meriam.
 class Rudal merupakan child dari class Weaponery karena Rudal merupakan salah satu jenis Weaponery dalam kasus kapal perang. class Rudal memiliki attribut **tipePemandu (str)** yang merepresentasikan alat pemandu dari rudal, serta attribut **sasaran (str)** yang merepresentasikan jenis sasaran rudal (udara, darat, dsb.).
 
 5. Meriam
-class Meriam merupakan child dari class Weaponery karena Meriam merupakan salah satu jenis Weaponery dalam kasus kapal perang. class Meriam memiliki attribut **kaliber (str)** yang merepresentasikan jenis ammo yang digunakan.
+class Meriam merupakan child dari class Weaponery karena Meriam merupakan salah satu jenis Weaponery dalam kasus kapal perang. class Meriam memiliki attribut **kaliber (float)** yang merepresentasikan jenis ammo yang digunakan.
 
 ## Penjelasan alur progam
 Program menggunakan data yang ditambahkan secara hardcode dan tidak memiliki fitur tambah data dari user. Alur program sebagai berikut:\
